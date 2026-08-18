@@ -1,0 +1,18 @@
+from Vehicle import tollbooth
+toll1 = tollbooth()
+while True :
+    user = int (input ("Enter from the option : 1.Cars passed 2.Show info 3.Exit"))
+    
+    if user == 1 :
+        ispaid = input("Enter if the payment is done or not")
+        reg = str(input("Enter the registration number :"))
+        vehicle_type = input("Enter vehicle type (normal/heavy): ")
+        toll1.Cars_passed(ispaid , reg , vehicle_type)
+
+    elif user == 2 :
+        toll1.Show_info()
+    elif user == 3 :
+        print("Thankyou")
+        break
+    else:
+        print("invalid input")
